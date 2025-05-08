@@ -133,7 +133,7 @@ A BRD focuses on the "what" and "why" of business needs, not the "how" of implem
 
 ### Prompt Example
 
-### [Example Chat with AI and Responses](/BRD-chat)
+### [Example Chat with AI and Responses](/BRD-chat.md)
 
 
 ## 2. UI/UX Design - UI-UX
@@ -143,7 +143,7 @@ A BRD focuses on the "what" and "why" of business needs, not the "how" of implem
 
 ### Prompt Example
 
-### [Example Chat with AI and Responses](/UI-UX-chat)
+### [Example Chat with AI and Responses](/UI-UX-chat.md)
 
 
 ## 3. High-level Achitecture - ARCH
@@ -153,7 +153,7 @@ A BRD focuses on the "what" and "why" of business needs, not the "how" of implem
 
 ### Prompt Example
 
-### [Example Chat with AI and Responses](/ARCH-chat)
+### [Example Chat with AI and Responses](/ARCH-chat.md)
 
 
 ## 4. Product Requirements - PRD
@@ -163,7 +163,7 @@ A BRD focuses on the "what" and "why" of business needs, not the "how" of implem
 
 ### Prompt Example
 
-### [Example Chat with AI and Responses](/PRD-chat)
+### [Example Chat with AI and Responses](/PRD-chat.md)
 
 
 ## 5. Technical Design - TDD
@@ -173,7 +173,7 @@ A BRD focuses on the "what" and "why" of business needs, not the "how" of implem
 
 ### Prompt Example
 
-### [Example Chat with AI and Responses](/TDD-chat)
+### [Example Chat with AI and Responses](/TDD-chat.md)
 
 
 ## 6. Task Planning - taskplan
@@ -183,7 +183,7 @@ A BRD focuses on the "what" and "why" of business needs, not the "how" of implem
 
 ### Prompt Example
 
-### [Example Chat with AI and Responses](/taskplan-chat)
+### [Example Chat with AI and Responses](/taskplan-chat.md)
 
 
 ## 7. Execution
@@ -193,7 +193,7 @@ A BRD focuses on the "what" and "why" of business needs, not the "how" of implem
 
 ### Prompt Example
 
-### [Example Chat with AI and Responses](/exec-chat)
+### [Example Chat with AI and Responses](/exec-chat.md)
 
 
 ## 8. Packaging
@@ -203,7 +203,7 @@ A BRD focuses on the "what" and "why" of business needs, not the "how" of implem
 
 ### Prompt Example
 
-### [Example Chat with AI and Responses](/pkg-chat)
+### [Example Chat with AI and Responses](/pkg-chat.md)
 
 
 ## 9. Deployment
@@ -213,5 +213,5 @@ A BRD focuses on the "what" and "why" of business needs, not the "how" of implem
 
 ### Prompt Example
 
-### [Example Chat with AI and Responses](/deploy-chat)
+### [Example Chat with AI and Responses](/deploy-chat.md)
 
