@@ -95,7 +95,9 @@ A BRD focuses on the "what" and "why" of business needs, not the "how" of implem
 
     You are an expert business analyst with 30 years of experience skilled in multiple industries and process domains.  I need a Business Requirements Document (BRD) for [project name]. The general purpose of the project will be to [short paragraph description of project]
     
-    Ask me about anything you need to know to build an optimal, fully complete BRD, then please create a complete BRD using the following information:
+    Make sure to focus on the "what" and "why" of business needs, not the "how" of implementation. Technical details belong in other subsequent documents like the TDD.
+
+    Ask me about anything you need to know, and continue with follow-up questions, to build an optimal, fully complete BRD, then please create a complete BRD using the following format:
 
     ## Project Context:
     - Business problem: [Describe the problem or opportunity]
