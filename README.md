@@ -24,7 +24,7 @@ I personnaly use Anthropic's Claude Sonnet 3.7 (more specifically claude-3-7-son
 >**Note**: be VERY carefule with protecting your API key - if a nefarious person/organization gets your key, they can quickly run up many thousands of dollars of charges at your expense.
 
 ### Coding Environment
-I have used [VS Code](https://code.visualstudio.com/) with the [Cline](https://cline.bot/) extension, but have more recently switched to [Claude Code](https://docs.anthropic.com/en/docs/claude-code/overview).  Claude Code runs in a WSL2 environment on Windows, so be aware of this additional setup and usage complexity.
+I have used [VS Code](https://code.visualstudio.com/) with the [Cline](https://cline.bot/) extension, but have more recently switched to [Claude Code](https://docs.anthropic.com/en/docs/claude-code/overview).  Claude Code runs in a WSL2 environment on Windows, so be aware of this additional setup and usage complexity.  Other options are set up a VM on Windows to run a Linux VM or set up a cheap VPS in the cloud.
 
 I have not used windsurf or cursor, but they are popular options as well.
 
