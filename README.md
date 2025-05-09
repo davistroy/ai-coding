@@ -5,14 +5,14 @@ For reference: [Markdown Syntax](https://www.markdownguide.org/basic-syntax/)
 ## General Structure
 0. Development System/Tooling Setup
 1. Business Requirements
-2. UI/UX Design
-3. High-level Achitecture
-4. Product Requirements
-5. Technical Design
-6. Task Planning
-7. Execution
-8. Packaging
-9. Deployment
+1. UI/UX Design
+1. High-level Achitecture
+1. Product Requirements
+1. Technical Design
+1. Task Planning
+1. Execution
+1. Packaging
+1. Deployment
 
 
 ## 0. Development System/Tooling Setup
@@ -30,11 +30,15 @@ I have not used windsurf or cursor, but they are popular options as well.
 
 Use the documentation to install the tool(s) of your choice.
 
+One thing to try to keep current on is the "rules" you load into your tool (varies by tool), some of which are general rules and some of which will be project/technology specific.  This will dramatically affect the quality of the output.  See the various rules files examples in this reporsitory (which may not be up to date), and definitely use AI and Google to look for rules files.  Here is a repository set up for Cline, but these rules will probably work in any tool: https://github.com/cline/prompts/tree/main/.clinerules
+
 ### Node.js
 For many MCPs (see below) as well as building certain types of apps, you will need [Node.js](https://nodejs.org/en) installed.  Install the latest version.
 
 ### Python
 For many MCPs (see below) as well as building certain types of apps, you will need [Python](https://www.python.org/) installed.  As of May 2025, 3.11 should work fine, but do your own research.  I would install 3.11 or higher.
+
+Additionally, you may need UV to go along with Python: https://docs.astral.sh/uv/getting-started/installation/
 
 ### MCP Servers
 Installing MCP servers can be a bit tricky and varies by environment.  You may need to install Node packages or Python packages prior to configuring your tool.  
@@ -61,6 +65,8 @@ Depending on the type of project you are building, other MCP servers may be help
 #### Business Requirements Document (BRD) Overview
 
 A Business Requirements Document (BRD) captures the high-level business needs and requirements for a project or initiative. It serves as a foundation for all subsequent project documentation.
+
+Once the initial BRD is complete, feel free to come back and revise / augment the BRD as the project progresses.
 
 #### What IS Typically in a BRD:
 
@@ -129,7 +135,15 @@ A BRD focuses on the "what" and "why" of business needs, not the "how" of implem
 
     Format the BRD professionally with appropriate sections, and include an executive summary. Focus on business requirements only, not technical solutions or implementation details.
 
-    Again, ask me any questions and follow-up questions to make sure you provide an optimal result.
+    Again, ask me any questions and continue with follow-up questions until you have enough input to make sure you provide an optimal result.
+
+I usually open notepad, and paste in any questions and provide my aswers underneath.  If there is a question you do not understand or need help answering, ask:
+
+    For the question about [paste question here], provide me with more information and give me your top three potential answers (or examples of answers), then make a recommendation and tell me your logic behind your recommendation. 
+
+If follow-up is needed after you provide answers to questions:
+
+    Ask me any further uestions and continue with follow-up questions until you have enough input to make sure you provide an optimal result.
 
 ### Prompt Example
 
@@ -138,8 +152,156 @@ A BRD focuses on the "what" and "why" of business needs, not the "how" of implem
 
 ## 2. UI/UX Design - UI-UX
 ### About
+A **UI/UX Design Guide** (also called a **Design System** or **Design Specification Document**) is a comprehensive reference that defines how user interfaces should look and behave across a digital product or suite of products. It provides a consistent framework for designing user experiences that are intuitive, efficient, accessible, and visually coherent.
+
+In practice, a well-structured design guide accelerates development, reduces inconsistencies, and improves collaboration across teams. For agile environments, I strongly recommend linking this guide to live documentation platforms (e.g., Storybook or Figma components), and having automated checks (e.g., visual regression testing) to ensure adherence. Avoid letting the design guide become a static document—make it a living system.
+
+Below is a **structured outline** describing the components and purpose of a robust sample UI/UX Design Guide that you can use in your prompt to lead AI to produce an output in this format:
+
+---
+
+#### 1. **Purpose and Scope**
+
+* **Objective**: Define the visual language, interaction models, and usability principles for the application.
+* **Scope**: Applicable to all screens, platforms (desktop, web, mobile), and user interaction points within the product ecosystem.
+* **Audience**: Designers, developers, product managers, and QA teams.
+
+#### 2. **Design Principles**
+
+* **Consistency**: Uniformity across all components, behaviors, and layouts.
+* **Clarity**: Prioritize readability, intuitiveness, and visual hierarchy.
+* **Efficiency**: Minimize user effort to achieve goals.
+* **Feedback**: Immediate and informative responses to user actions.
+* **Accessibility**: Inclusive design for users with disabilities (e.g., WCAG 2.1 compliance).
+* **Responsiveness**: Adaptability to different screen sizes and devices.
+
+#### 3. **Branding Guidelines**
+
+* **Logo Usage**: Placement, size constraints, clear space, and misuse examples.
+* **Color Palette**:
+
+  * Primary and secondary colors
+  * Accent colors
+  * Background and text color combinations (including light/dark modes)
+* **Typography**:
+
+  * Font families
+  * Font sizes and weights
+  * Line height and spacing rules
+* **Imagery and Icons**:
+
+  * Style (flat, outline, filled)
+  * Usage rules and preferred libraries (e.g., FontAwesome, Material Icons)
+
+#### 4. **Layout and Grids**
+
+* **Grid System**: 8-point grid, column count, spacing rules
+* **Breakpoints**: Defined screen sizes for responsive design (e.g., mobile, tablet, desktop)
+* **Margins and Padding**: Standardized units for element spacing
+
+#### 5. **Components and Patterns**
+
+Each component should include:
+
+* **Name and Purpose**
+* **Visual Example**
+* **Usage Guidelines**
+* **States**: Default, hover, active, disabled, focused
+* **Responsive Behavior**
+* **Accessibility Notes**
+
+**Common Components**:
+
+* **Buttons**: Primary, secondary, icon-only
+* **Text Inputs**: Single-line, multiline, with validation
+* **Dropdowns, Selects**
+* **Checkboxes, Radios, Switches**
+* **Modals and Dialogs**
+* **Cards and Panels**
+* **Tooltips and Popovers**
+* **Forms**: Layout patterns, field groupings
+* **Tables**: Sortable headers, pagination, inline editing
+* **Navigation**:
+
+  * Global nav bar
+  * Sidebars and menus
+  * Breadcrumbs and tabs
+* **Status Indicators**: Badges, chips, spinners, progress bars
+
+#### 6. **Interaction Design**
+
+* **User Flows**: Common paths through the system (e.g., sign-in, form submission)
+* **Transitions and Animations**:
+
+  * Rules for motion (e.g., duration, easing)
+  * When and where to use animations
+* **Error Handling and Feedback**:
+
+  * Error message standards
+  * Inline validations and alerts
+* **Microinteractions**:
+
+  * Examples: Button clicks, hover states, form auto-save
+
+#### 7. **Content and Language**
+
+* **Tone and Voice**: Friendly, professional, concise, etc.
+* **UI Text Guidelines**:
+
+  * Button labels, headings, tooltips
+  * Empty states, loading states, errors
+* **Localization/Internationalization**:
+
+  * String length guidelines
+  * Date/time formatting
+  * RTL language support
+
+#### 8. **Accessibility Standards**
+
+* **Color Contrast**: Minimum 4.5:1 for text
+* **Keyboard Navigation**: Tabbing order, focus indicators
+* **Screen Reader Support**
+* **Form Labeling and ARIA Attributes**
+
+#### 9. **Platform-Specific Guidelines**
+
+* **Desktop vs. Mobile**: Adjustments in layout, input types, gesture support
+* **Native Application Standards** (if applicable): Adherence to platform-specific UI patterns (e.g., Material Design for Android, Human Interface Guidelines for iOS/macOS)
+
+#### 10. **Implementation Guidelines**
+
+* **Code Integration**:
+
+  * CSS/SCSS standards
+  * Component libraries (e.g., React components, PySide6 widgets)
+* **Versioning and Maintenance**:
+
+  * How changes to the design guide are proposed and accepted
+  * Governance process
+* **Tooling and Collaboration**:
+
+  * Design Tools (e.g., Figma, Sketch)
+  * Prototyping Tools (e.g., Adobe XD, InVision)
+  * Documentation Platforms (e.g., Storybook, Zeroheight, Notion)
+
+#### 11. **Sample Use Cases and Mockups**
+
+* **Annotated Wireframes**: Key screens with explanations
+* **User Flows**: End-to-end journeys illustrated
+* **Dark Mode / Light Mode Examples**
+* **Edge Cases and Responsive Breakdowns**
+
+#### 12. **Appendices**
+
+* **Glossary of Terms**
+* **Design Tokens**: Color codes, font sizes, spacing units
+* **Downloadable Assets**: Logos, icons, component libraries
+* **Changelog**: Record of all updates to the guide
+
+---
 
 ### Prompt Template
+    write a very detailed tech stack agnostic UI/UX guideline document based on the layout, look and feel of the attached screenshots.  Make the guideline general enough for any enterprise forms-based application.  Ask me any questions that may help produce an optimal result.  Include the following sections in your response: <include a template like the above>
 
 ### Prompt Example
 
