@@ -149,6 +149,7 @@ If follow-up is needed after you provide answers to questions:
 
 ### [Example Chat with AI and Responses](/BRD-chat.md)
 
+---
 
 ## 2. UI/UX Design - UI-UX
 ### About
@@ -176,25 +177,20 @@ Below is a **structured outline** describing the components and purpose of a rob
 * **Responsiveness**: Adaptability to different screen sizes and devices.
 
 #### 3. **Branding Guidelines**
-
 * **Logo Usage**: Placement, size constraints, clear space, and misuse examples.
 * **Color Palette**:
-
   * Primary and secondary colors
   * Accent colors
   * Background and text color combinations (including light/dark modes)
 * **Typography**:
-
   * Font families
   * Font sizes and weights
   * Line height and spacing rules
 * **Imagery and Icons**:
-
   * Style (flat, outline, filled)
   * Usage rules and preferred libraries (e.g., FontAwesome, Material Icons)
 
 #### 4. **Layout and Grids**
-
 * **Grid System**: 8-point grid, column count, spacing rules
 * **Breakpoints**: Defined screen sizes for responsive design (e.g., mobile, tablet, desktop)
 * **Margins and Padding**: Standardized units for element spacing
@@ -202,7 +198,6 @@ Below is a **structured outline** describing the components and purpose of a rob
 #### 5. **Components and Patterns**
 
 Each component should include:
-
 * **Name and Purpose**
 * **Visual Example**
 * **Usage Guidelines**
@@ -211,7 +206,6 @@ Each component should include:
 * **Accessibility Notes**
 
 **Common Components**:
-
 * **Buttons**: Primary, secondary, icon-only
 * **Text Inputs**: Single-line, multiline, with validation
 * **Dropdowns, Selects**
@@ -222,7 +216,6 @@ Each component should include:
 * **Forms**: Layout patterns, field groupings
 * **Tables**: Sortable headers, pagination, inline editing
 * **Navigation**:
-
   * Global nav bar
   * Sidebars and menus
   * Breadcrumbs and tabs
@@ -232,26 +225,21 @@ Each component should include:
 
 * **User Flows**: Common paths through the system (e.g., sign-in, form submission)
 * **Transitions and Animations**:
-
   * Rules for motion (e.g., duration, easing)
   * When and where to use animations
 * **Error Handling and Feedback**:
-
   * Error message standards
   * Inline validations and alerts
 * **Microinteractions**:
-
   * Examples: Button clicks, hover states, form auto-save
 
 #### 7. **Content and Language**
 
 * **Tone and Voice**: Friendly, professional, concise, etc.
 * **UI Text Guidelines**:
-
   * Button labels, headings, tooltips
   * Empty states, loading states, errors
 * **Localization/Internationalization**:
-
   * String length guidelines
   * Date/time formatting
   * RTL language support
@@ -271,15 +259,12 @@ Each component should include:
 #### 10. **Implementation Guidelines**
 
 * **Code Integration**:
-
   * CSS/SCSS standards
   * Component libraries (e.g., React components, PySide6 widgets)
 * **Versioning and Maintenance**:
-
   * How changes to the design guide are proposed and accepted
   * Governance process
 * **Tooling and Collaboration**:
-
   * Design Tools (e.g., Figma, Sketch)
   * Prototyping Tools (e.g., Adobe XD, InVision)
   * Documentation Platforms (e.g., Storybook, Zeroheight, Notion)
@@ -307,6 +292,7 @@ Each component should include:
 
 ### [Example Chat with AI and Responses](/UI-UX-chat.md)
 
+---
 
 ## 3. High-level Achitecture - ARCH
 ### About
@@ -317,6 +303,7 @@ Each component should include:
 
 ### [Example Chat with AI and Responses](/ARCH-chat.md)
 
+---
 
 ## 4. Product Requirements - PRD
 ### About
@@ -327,6 +314,7 @@ Each component should include:
 
 ### [Example Chat with AI and Responses](/PRD-chat.md)
 
+---
 
 ## 5. Technical Design - TDD
 ### About
@@ -337,6 +325,7 @@ Each component should include:
 
 ### [Example Chat with AI and Responses](/TDD-chat.md)
 
+---
 
 ## 6. Task Planning - taskplan
 ### About
@@ -347,6 +336,7 @@ Each component should include:
 
 ### [Example Chat with AI and Responses](/taskplan-chat.md)
 
+---
 
 ## 7. Execution
 ### About
@@ -357,6 +347,7 @@ Each component should include:
 
 ### [Example Chat with AI and Responses](/exec-chat.md)
 
+---
 
 ## 8. Packaging
 ### About
@@ -367,6 +358,7 @@ Each component should include:
 
 ### [Example Chat with AI and Responses](/pkg-chat.md)
 
+---
 
 ## 9. Deployment
 ### About
@@ -376,4 +368,8 @@ Each component should include:
 ### Prompt Example
 
 ### [Example Chat with AI and Responses](/deploy-chat.md)
+
+---
+
+## Other Information and Links
 
