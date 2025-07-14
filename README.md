@@ -1,6 +1,6 @@
 For reference: [Markdown Syntax](https://www.markdownguide.org/basic-syntax/)
 
-# Prompts for Vibe Coding
+# Prompts for AI (aka "Vibe") Coding
 
 ## General Structure
 0. Development System/Tooling Setup
@@ -52,7 +52,8 @@ I suggest installing the following MCP servers:
 [github](https://github.com/github/github-mcp-server)  
 [context7](https://github.com/upstash/context7)  
 [taskmaster-ai](https://github.com/eyaltoledano/claude-task-master)  
-[desktop-commander](https://github.com/wonderwhy-er/DesktopCommanderMCP)
+[desktop-commander](https://github.com/wonderwhy-er/DesktopCommanderMCP)  
+[playwright](https://github.com/microsoft/playwright-mcp)
 
 Depending on the type of project you are building, other MCP servers may be helpful.
 
@@ -97,57 +98,10 @@ Once the initial BRD is complete, feel free to come back and revise / augment th
 A BRD focuses on the "what" and "why" of business needs, not the "how" of implementation. Technical details belong in subsequent documents like the Functional Requirements Document (FRD) or Technical Requirements Document (TRD).
 
 
-### Prompt Template
+### [Prompt Template](/BRD-template.md) - Use this to create your own prompt
 
-    You are an expert business analyst with 30 years of experience skilled in multiple industries and process domains.  I need a Business Requirements Document (BRD) for [project name]. The general purpose of the project will be to [short paragraph description of project]
-    
-    Make sure to focus on the "what" and "why" of business needs, not the "how" of implementation. Technical details belong in other subsequent documents like the TDD.
+### [Prompt Example](/BRD-chat.md) - Example Chat with AI and Responses
 
-    Ask me about anything you need to know, and continue with follow-up questions, to build an optimal, fully complete BRD, then please create a complete BRD using the following format:
-
-    ## Project Context:
-    - Business problem: [Describe the problem or opportunity]
-    - Current situation: [Explain how things work today]
-    - Business impact: [Describe why solving this problem matters]
-
-    ## Project Scope:
-    - Key objectives: [List 2-3 primary goals]
-    - Target users/departments: [Who will benefit from this project]
-    - Desired timeline: [Expected project duration or completion date]
-    - Budget constraints (if applicable): [Rough budget range]
-
-    ## Requirements Information:
-    - Critical business functions needed: [List key capabilities]
-    - Must-have features: [Essential requirements]
-    - Nice-to-have features: [Optional but valuable features]
-    - Business rules or policies that must be followed: [Any compliance or policy considerations]
-    - Key performance indicators: [How success will be measured]
-
-    ## Stakeholders:
-    - Decision makers: [Who approves the project]
-    - End users: [Who will use the solution]
-    - Subject matter experts: [Who understands the business domain]
-
-    ## Constraints and Assumptions:
-    - Known limitations: [Business, technical, or resource constraints]
-    - Assumptions being made: [What we're taking for granted]
-    - Dependencies: [External factors project success relies on]
-
-    Format the BRD professionally with appropriate sections, and include an executive summary. Focus on business requirements only, not technical solutions or implementation details.
-
-    Again, ask me any questions and continue with follow-up questions until you have enough input to make sure you provide an optimal result.
-
-I usually open notepad, and paste in any questions and provide my aswers underneath.  If there is a question you do not understand or need help answering, ask:
-
-    For the question about [paste question here], provide me with more information and give me your top three potential answers (or examples of answers), then make a recommendation and tell me your logic behind your recommendation. 
-
-If follow-up is needed after you provide answers to questions:
-
-    Ask me any further uestions and continue with follow-up questions until you have enough input to make sure you provide an optimal result.
-
-### Prompt Example
-
-### [Example Chat with AI and Responses](/BRD-chat.md)
 
 ---
 
