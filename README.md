@@ -98,9 +98,11 @@ Once the initial BRD is complete, feel free to come back and revise / augment th
 A BRD focuses on the "what" and "why" of business needs, not the "how" of implementation. Technical details belong in subsequent documents like the Functional Requirements Document (FRD) or Technical Requirements Document (TRD).
 
 
-### [Prompt Template](/BRD-template.md) - Use this to create your own prompt
+### [Prompt Template](/BRD-template.md) -> Use this to create your own prompt
 
-### [Prompt Example](/BRD-chat.md) - Example Chat with AI and Responses
+### [Prompt Example](/BRD-chat.md)
+
+### [Example Chat](/BRD-example.md) with AI and Responses
 
 
 ---
