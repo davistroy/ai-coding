@@ -19,7 +19,7 @@ For reference: [Markdown Syntax](https://www.markdownguide.org/basic-syntax/)
 The below should get you a good foundation for AI coding.  Depending on the type of project, you may choose to use other, alternative, or additional tools.
 
 ### AI Selection
-I personnaly use Anthropic's Claude Sonnet 3.7 (more specifically claude-3-7-sonnet-20250219).  Gemini Pro 2.5 and OpenAI's models, and possibly Deepseek, are also known to be good.  In any case, you more than likely will need an API key.  I subscribed to Anthropic's [CLaude Max plan](https://www.anthropic.com/news/max-plan) to keep my costs low as the API charges were getting expensive with Claude (API costs vary by model - may be worth exploring).  You will be using a combination of chat within a model and API to enable the below processes.
+I personnaly use Anthropic's Claude Opus, but Claude Sonnet works well for anything that is not complex.  Gemini Pro and OpenAI's models, and possibly Deepseek, are also known to be good.  In any case, you more than likely will need an API key.  I subscribed to Anthropic's [CLaude Max plan](https://www.anthropic.com/news/max-plan) to keep my costs low as the API charges were getting expensive with Claude (API costs vary by model - may be worth exploring).  You will be using a combination of chat within a model and API to enable the below processes.
 
 >**Note**: be VERY carefule with protecting your API key - if a nefarious person/organization gets your key, they can quickly run up many thousands of dollars of charges at your expense.
 
