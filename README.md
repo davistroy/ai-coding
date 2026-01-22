@@ -1,16 +1,19 @@
 # AI-Assisted Development Guide
 
-A comprehensive framework for building software applications using AI assistants. This repository contains templates and examples for creating documentation that guides AI-assisted development from business requirements through deployment.
+A comprehensive framework for building software applications using AI assistants. This repository provides templates and real-world examples that guide AI-assisted development from business requirements through deployment.
 
-For reference: [Markdown Syntax](https://www.markdownguide.org/basic-syntax/)
+[![Documentation](https://img.shields.io/badge/docs-comprehensive-blue)](#templates-and-examples-summary)
+[![Templates](https://img.shields.io/badge/templates-5%20core%20types-green)](#templates-and-examples-summary)
+[![Example Project](https://img.shields.io/badge/example-TacoTracker%203000-orange)](#example-project-tacotracker-3000)
 
 ---
 
 ## Table of Contents
 
 1. [Overview](#overview)
-2. [Development System Setup](#0-development-systemtooling-setup)
-3. [Suggested Workflow](#suggested-workflow-for-building-an-app)
+2. [Quick Start Guide](#quick-start-guide)
+3. [Development System Setup](#development-systemtooling-setup)
+4. [Workflow Overview](#suggested-workflow-for-building-an-app)
    - [Step 1: Business Requirements (BRD)](#1-business-requirements---brd)
    - [Step 2: Product Requirements (PRD)](#2-product-requirements---prd)
    - [Step 3: UI/UX Design](#3-uiux-design---ui-ux)
@@ -20,95 +23,217 @@ For reference: [Markdown Syntax](https://www.markdownguide.org/basic-syntax/)
    - [Step 7: Execution](#7-execution)
    - [Step 8: Packaging](#8-packaging)
    - [Step 9: Deployment](#9-deployment)
-4. [Templates and Examples Summary](#templates-and-examples-summary)
+5. [Templates and Examples Summary](#templates-and-examples-summary)
+6. [How to Use the Templates](#how-to-use-the-templates)
+7. [Customization Guide](#customization-guide)
+8. [Best Practices](#best-practices)
+9. [FAQ and Troubleshooting](#faq-and-troubleshooting)
+10. [Glossary](#glossary)
+11. [Related Resources](#related-resources)
+12. [Contributing](#contributing)
+13. [License](#license)
 
 ---
 
 ## Overview
 
-This repository provides a structured approach to AI-assisted software development through a series of document templates and examples. Each phase of development is supported by:
+This framework provides a structured approach to AI-assisted software development through document templates and examples. The key insight is that **high-quality documentation serves as comprehensive context for AI assistants**, enabling them to generate better, more consistent code.
 
-- **Templates**: Prompts designed to guide AI in generating comprehensive documentation
-- **Examples**: Real-world examples using the fictional "TacoTracker 3000" project to demonstrate expected output quality
+### Core Philosophy
 
-The workflow progresses from high-level business requirements through technical implementation, ensuring nothing is lost in translation between business needs and code.
+```
+Better Documentation → Better AI Context → Better Code Output
+```
+
+### What This Repository Provides
+
+| Component | Description |
+|-----------|-------------|
+| **Templates** | Prompt templates that guide AI in generating comprehensive documentation through interactive discovery |
+| **Examples** | Complete examples using the fictional "TacoTracker 3000" project demonstrating expected output quality |
+| **Workflow** | A proven 9-step process from business requirements to deployment |
+
+### Why This Approach Works
+
+1. **Progressive Elaboration**: Each document builds on the previous, ensuring nothing is lost in translation
+2. **AI as Expert**: Templates assign specific expert personas to AI, improving output quality
+3. **Interactive Discovery**: Templates include structured interview processes, not just fill-in-the-blank forms
+4. **Consistency**: Using the same example project across all documents shows how information flows through phases
 
 ---
 
-## 0. Development System/Tooling Setup
+## Quick Start Guide
+
+Get started in 5 minutes:
+
+### Step 1: Choose Your Starting Point
+
+| Starting Point | When to Use | First Document |
+|---------------|-------------|----------------|
+| New project idea | You have a business problem to solve | Start with [BRD Template](./BRD-template.md) |
+| Defined requirements | Business needs are clear, need product specs | Start with [PRD Template](./PRD-template.md) |
+| Design-first approach | You know what to build, need design system | Start with [UI-UX Template](./UI-UX-template.md) |
+| Technical planning | Requirements exist, need architecture | Start with [ARCH Template](./ARCH-template.md) |
+| Ready to code | Architecture defined, need implementation specs | Start with [TDD Template](./TDD-template.md) |
+
+### Step 2: Use a Template
+
+1. **Copy the template** into your AI chat interface (Claude, ChatGPT, Gemini, etc.)
+2. **Fill in the context section** at the top of the template with your project details
+3. **Let the AI guide you** through the discovery process with questions
+4. **Review and iterate** on the generated document
+5. **Save the output** as a reference for the next phase
+
+### Step 3: Example First Interaction
+
+```
+You: [Paste BRD-template.md content]
+
+AI: I'll help you create a comprehensive Business Requirements Document.
+    Let me start by analyzing the context you've provided...
+
+    First, I have some clarifying questions:
+    1. Who are the primary stakeholders for this project?
+    2. What specific business metrics are you trying to improve?
+    ...
+
+You: [Answer the questions]
+
+AI: [Continues discovery process, then generates BRD]
+```
+
+### Step 4: Feed Forward
+
+When moving to the next phase, include the previous document as context:
+
+```
+You: I've completed my BRD. Here it is: [paste BRD]
+
+     Now I'd like to create a PRD. Here's the template: [paste PRD-template.md]
+```
+
+---
+
+## Development System/Tooling Setup
 
 The following tools provide a solid foundation for AI-assisted coding. Depending on your project type, you may choose alternative or additional tools.
 
-### AI Selection
+### AI Model Selection
 
-I personally use Anthropic's Claude Opus, but Claude Sonnet works well for anything that is not complex. Gemini Pro and OpenAI's models, and possibly Deepseek, are also known to be good. In any case, you will more than likely need an API key. I subscribed to Anthropic's [Claude Max plan](https://www.anthropic.com/news/max-plan) to keep my costs low as the API charges were getting expensive with Claude (API costs vary by model - may be worth exploring). You will be using a combination of chat within a model and API to enable the below processes.
+| Model | Best For | Cost Consideration |
+|-------|----------|-------------------|
+| **Claude Opus** | Complex reasoning, architecture, detailed documentation | Higher cost, best quality |
+| **Claude Sonnet** | General development, code generation, everyday tasks | Balanced cost/quality |
+| **GPT-4** | Alternative for varied tasks | Comparable to Sonnet |
+| **Gemini Pro** | Google ecosystem integration | Competitive pricing |
 
-> **Note**: Be VERY careful with protecting your API key - if a nefarious person/organization gets your key, they can quickly run up many thousands of dollars of charges at your expense.
+I personally use Anthropic's Claude Opus for complex work and Sonnet for routine tasks. Consider subscribing to [Claude Max plan](https://www.anthropic.com/news/max-plan) to manage API costs.
 
-### Coding Environment
+> **⚠️ Security Warning**: Be VERY careful with protecting your API key. If compromised, unauthorized users can quickly run up thousands of dollars in charges at your expense. Never commit API keys to repositories.
 
-I have used [VS Code](https://code.visualstudio.com/) with [Claude Code](https://docs.anthropic.com/en/docs/claude-code/overview).
+### Coding Environment Options
 
-I have not used Windsurf or Cursor, but they are popular options as well.
+| Environment | Description | Best For |
+|-------------|-------------|----------|
+| [VS Code](https://code.visualstudio.com/) + [Claude Code](https://docs.anthropic.com/en/docs/claude-code/overview) | Official Anthropic VS Code integration | Claude users, full IDE experience |
+| [Cursor](https://cursor.sh/) | AI-first code editor | Those wanting dedicated AI IDE |
+| [Windsurf](https://codeium.com/windsurf) | Codeium's AI-powered editor | Alternative AI IDE experience |
+| [Cline](https://cline.bot/) | VS Code extension for AI coding | VS Code users wanting flexibility |
 
-Use the documentation to install the tool(s) of your choice.
+### Rules Files
 
-One thing to try to keep current on is the "rules" you load into your tool (varies by tool), some of which are general rules and some of which will be project/technology specific. This will dramatically affect the quality of the output. See the various rules files examples in this repository (which may not be up to date), and definitely use AI and Google to look for rules files. Here is a repository set up for Cline, but these rules will probably work in any tool: https://github.com/cline/prompts/tree/main/.clinerules
+One thing to keep current on is the "rules" you load into your tool. These dramatically affect output quality:
 
-### Node.js
+- **General rules**: Coding standards, best practices, response formatting
+- **Project-specific rules**: Technology choices, naming conventions, architecture patterns
 
-For many MCPs (see below) as well as building certain types of apps, you will need [Node.js](https://nodejs.org/en) installed. Install the latest version.
+Resources for rules:
+- [Cline Rules Repository](https://github.com/cline/prompts/tree/main/.clinerules) - Works with most tools
+- Search for "[your tool] rules files" for tool-specific options
 
-### Python
+### Runtime Requirements
 
-For many MCPs (see below) as well as building certain types of apps, you will need [Python](https://www.python.org/) installed. As of May 2025, 3.11 should work fine, but do your own research. I would install 3.11 or higher.
+#### Node.js
+Required for many MCPs and JavaScript/TypeScript projects.
+- Install: [nodejs.org](https://nodejs.org/en)
+- Version: Latest LTS recommended
 
-Additionally, you may need UV to go along with Python: https://docs.astral.sh/uv/getting-started/installation/
+#### Python
+Required for many MCPs and Python projects.
+- Install: [python.org](https://www.python.org/)
+- Version: 3.11 or higher recommended
+- Package manager: [UV](https://docs.astral.sh/uv/getting-started/installation/) recommended for modern Python projects
 
-### MCP Servers
+### MCP Servers (Model Context Protocol)
 
-Installing MCP servers can be a bit tricky and varies by environment. You may need to install Node packages or Python packages prior to configuring your tool.
+MCP servers extend AI capabilities with external tools and data sources.
 
-Here are the instructions for:
+**Installation Guides:**
 - [Claude Desktop](https://docs.anthropic.com/en/docs/agents-and-tools/mcp)
 - [Claude Code](https://docs.anthropic.com/en/docs/claude-code/tutorials#set-up-model-context-protocol-mcp)
 - [VS Code Cline](https://cline.bot/mcp-marketplace)
 
-I suggest installing the following MCP servers:
-- [github](https://github.com/github/github-mcp-server) - if you want to store your code in a version control system
-- [context7](https://github.com/upstash/context7) - ensures the use of the latest documentation
-- [playwright](https://github.com/microsoft/playwright-mcp) - for browser automation (won't be needed for Claude Code - it has a Chrome driver built in)
+**Recommended MCP Servers:**
 
-Depending on the type of project you are building, other MCP servers may be helpful.
+| Server | Purpose | Notes |
+|--------|---------|-------|
+| [GitHub](https://github.com/github/github-mcp-server) | Version control integration | Essential for code management |
+| [Context7](https://github.com/upstash/context7) | Latest documentation access | Ensures AI uses current docs |
+| [Playwright](https://github.com/microsoft/playwright-mcp) | Browser automation | Not needed for Claude Code (built-in) |
 
 ### Claude Code Extensions
 
-Claude Code supports extensions through its marketplace. To access and install extensions:
+Claude Code supports extensions through its marketplace:
 
-1. Use the `/plugins` slash command within Claude Code to browse available plugins
-2. Check the [official Claude Code documentation](https://docs.anthropic.com/en/docs/claude-code/overview) for the latest extension capabilities
-3. Community plugins can be found in repositories like the [Claude Code Marketplace](https://github.com/anthropics/claude-code)
+1. Use `/plugins` slash command to browse available plugins
+2. Check [official documentation](https://docs.anthropic.com/en/docs/claude-code/overview) for latest capabilities
+3. Community plugins available in [Claude Code Marketplace](https://github.com/anthropics/claude-code)
 
 ---
 
-# Suggested Workflow for Building an App
+## Suggested Workflow for Building an App
 
-The following workflow guides you through building an application with AI assistance. Each step builds upon the previous, creating a comprehensive documentation chain that ensures alignment from business requirements to deployed code.
+The following workflow guides you through building an application with AI assistance. Each step builds upon the previous, creating a comprehensive documentation chain.
 
 ```
-┌─────────────┐    ┌─────────────┐    ┌─────────────┐    ┌─────────────┐    ┌─────────────┐
-│     BRD     │───►│     PRD     │───►│   UI/UX     │───►│    ARCH     │───►│     TDD     │
-│  Business   │    │   Product   │    │   Design    │    │Architecture │    │  Technical  │
-│Requirements │    │Requirements │    │   System    │    │  Document   │    │   Design    │
-└─────────────┘    └─────────────┘    └─────────────┘    └─────────────┘    └─────────────┘
-                                                                                    │
-                                                                                    ▼
-┌─────────────┐    ┌─────────────┐    ┌─────────────┐    ┌─────────────┐
-│   Deploy    │◄───│   Package   │◄───│   Execute   │◄───│ Task Plan   │
-│  Release    │    │   Build     │    │    Code     │    │   Sprint    │
-│  Monitor    │    │   Test      │    │   Review    │    │  Planning   │
-└─────────────┘    └─────────────┘    └─────────────┘    └─────────────┘
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│                        AI-ASSISTED DEVELOPMENT WORKFLOW                          │
+├─────────────────────────────────────────────────────────────────────────────────┤
+│                                                                                  │
+│  ┌─────────┐   ┌─────────┐   ┌─────────┐   ┌─────────┐   ┌─────────┐           │
+│  │   BRD   │──►│   PRD   │──►│  UI/UX  │──►│  ARCH   │──►│   TDD   │           │
+│  │         │   │         │   │         │   │         │   │         │           │
+│  │  "Why"  │   │ "What"  │   │ "Look"  │   │  "How"  │   │"Exactly │           │
+│  │ & "What"│   │& "Who"  │   │& "Feel" │   │Structure│   │  How"   │           │
+│  └─────────┘   └─────────┘   └─────────┘   └─────────┘   └────┬────┘           │
+│                                                                │                 │
+│       REQUIREMENTS & DESIGN PHASE                              │                 │
+│  ─────────────────────────────────────────────────────────────┼─────────────── │
+│       IMPLEMENTATION PHASE                                     ▼                 │
+│                                                                                  │
+│  ┌─────────┐   ┌─────────┐   ┌─────────┐   ┌─────────┐                         │
+│  │ DEPLOY  │◄──│ PACKAGE │◄──│ EXECUTE │◄──│  TASK   │                         │
+│  │         │   │         │   │         │   │  PLAN   │                         │
+│  │ Release │   │  Build  │   │  Code   │   │ Sprint  │                         │
+│  │ Monitor │   │  Test   │   │ Review  │   │Planning │                         │
+│  └─────────┘   └─────────┘   └─────────┘   └─────────┘                         │
+│                                                                                  │
+└─────────────────────────────────────────────────────────────────────────────────┘
 ```
+
+### Document Flow Summary
+
+| Phase | Input | Output | Key Question Answered |
+|-------|-------|--------|----------------------|
+| BRD | Business problem | Business requirements | "Why are we building this?" |
+| PRD | BRD | Product specifications | "What will users do with it?" |
+| UI/UX | PRD | Design system | "How will it look and feel?" |
+| ARCH | PRD + UI/UX | System architecture | "How is it structured?" |
+| TDD | ARCH | Implementation specs | "How exactly do we build it?" |
+| Task Plan | TDD | Sprint backlog | "What tasks need to be done?" |
+| Execute | Task Plan | Working code | "Does it work?" |
+| Package | Code | Release artifacts | "Is it ready to ship?" |
+| Deploy | Package | Live system | "Is it in production?" |
 
 ---
 
@@ -116,44 +241,39 @@ The following workflow guides you through building an application with AI assist
 
 ### About
 
-A Business Requirements Document (BRD) captures the high-level business needs and requirements for a project or initiative. It serves as a foundation for all subsequent project documentation.
+A Business Requirements Document (BRD) captures the high-level business needs and requirements for a project. It serves as the foundation for all subsequent documentation.
 
-Once the initial BRD is complete, feel free to come back and revise/augment the BRD as the project progresses.
+Once the initial BRD is complete, feel free to revise and augment it as the project progresses.
 
-#### What IS Typically in a BRD:
+#### What IS Typically in a BRD
 
-- **Executive Summary**: Brief overview of the project's purpose and business justification
-- **Project Goals and Objectives**: Clear, measurable outcomes the project aims to achieve
-- **Business Requirements**: Detailed description of what the business needs to accomplish
-- **Stakeholder Information**: Key stakeholders, their roles, and responsibilities
-- **Scope**: Clear boundaries of what is included and excluded from the project
-- **Success Criteria**: Metrics to evaluate if the project meets business needs
-- **Constraints and Assumptions**: Business limitations, dependencies, and assumptions
-- **Risk Assessment**: Identification of potential business risks and mitigation strategies
-- **Cost-Benefit Analysis**: High-level overview of expected costs and benefits
-- **Timeline**: Major milestones and expected completion dates
+| Category | Contents |
+|----------|----------|
+| **Executive Summary** | Project purpose, business justification, ROI |
+| **Project Goals** | SMART objectives and success criteria |
+| **Business Requirements** | What the business needs to accomplish |
+| **Stakeholder Analysis** | Key people, roles, RACI matrix |
+| **Scope Definition** | In-scope, out-of-scope, boundaries |
+| **Risk Assessment** | Business risks and mitigation strategies |
+| **Financial Analysis** | Cost-benefit, TCO, budget breakdown |
+| **Compliance** | Regulatory and legal requirements |
 
-#### What is NOT in a BRD:
+#### What is NOT in a BRD
 
-- **Technical Solutions**: How the requirements will be implemented technically
-- **Detailed System Specifications**: Hardware/software configurations
-- **Code Samples**: Programming examples or pseudocode
-- **Data Models**: Database schemas or detailed data structures
-- **User Interface Designs**: Screen mockups or wireframes
-- **Test Cases**: Specific testing scenarios and procedures
-- **Implementation Plan**: Detailed deployment strategies
-- **Technical Architecture**: System architecture diagrams or specifications
-- **Operational Procedures**: Day-to-day management of the solution
-- **Detailed Project Schedule**: Task-level project plans with resource assignments
+- Technical solutions or implementation details
+- Database schemas or API specifications
+- UI mockups or wireframes
+- Test cases or deployment procedures
+- Code samples or architecture diagrams
 
-A BRD focuses on the "what" and "why" of business needs, not the "how" of implementation. Technical details belong in subsequent documents like the PRD, ARCH, and TDD.
+> **Key Principle**: A BRD focuses on the **"what"** and **"why"** of business needs, not the **"how"** of implementation.
 
 ### Resources
 
 | Resource | Description |
 |----------|-------------|
-| [BRD Template](./BRD-template.md) | Comprehensive prompt template for generating BRDs |
-| [BRD Example](./BRD-example.md) | Complete example BRD for TacoTracker 3000 |
+| [BRD Template](./BRD-template.md) | Comprehensive prompt template with 20+ section coverage |
+| [BRD Example](./BRD-example.md) | Complete example for TacoTracker 3000 (~1,100 lines) |
 
 ---
 
@@ -161,40 +281,36 @@ A BRD focuses on the "what" and "why" of business needs, not the "how" of implem
 
 ### About
 
-A Product Requirements Document (PRD) translates business requirements into detailed product specifications. It bridges the gap between business objectives and technical implementation by defining what the product should do from a user and feature perspective.
+A Product Requirements Document (PRD) translates business requirements into detailed product specifications. It bridges business objectives and technical implementation by defining what the product should do from a user perspective.
 
-The PRD builds directly on the BRD, taking business objectives and converting them into actionable product features, user stories, and acceptance criteria.
+#### What IS Typically in a PRD
 
-#### What IS Typically in a PRD:
+| Category | Contents |
+|----------|----------|
+| **Product Vision** | How product aligns with business goals |
+| **User Personas** | Detailed profiles with goals and pain points |
+| **User Journeys** | Step-by-step task completion flows |
+| **Feature Specifications** | Detailed feature descriptions with acceptance criteria |
+| **User Stories** | Agile-format requirements |
+| **Information Architecture** | Content and feature organization |
+| **Non-Functional Requirements** | Performance, scalability, accessibility |
+| **Success Metrics** | KPIs and analytics requirements |
 
-- **Product Vision and Strategy**: How the product aligns with business goals
-- **User Personas**: Detailed profiles of target users with goals and pain points
-- **User Journeys**: Step-by-step flows showing how users accomplish tasks
-- **Feature Specifications**: Detailed descriptions of each feature with acceptance criteria
-- **User Stories and Epics**: Agile-format requirements with clear acceptance criteria
-- **Information Architecture**: How content and features are organized
-- **Functional Requirements**: Specific behaviors the product must exhibit
-- **Non-Functional Requirements**: Performance, scalability, accessibility requirements
-- **Success Metrics**: KPIs and analytics to measure product success
-- **Release Planning**: Feature prioritization and phased delivery plan
-- **Dependencies and Constraints**: Technical and business dependencies
+#### What is NOT in a PRD
 
-#### What is NOT in a PRD:
+- Implementation code or technical architecture
+- Database schemas or API endpoint definitions
+- Deployment configurations
+- Detailed test implementations
 
-- **Implementation Details**: How features will be coded
-- **Database Schemas**: Detailed data structures
-- **API Specifications**: Endpoint definitions and contracts
-- **Deployment Architecture**: Infrastructure and DevOps details
-- **Test Implementation**: Actual test code or detailed test plans
-
-A PRD focuses on "what the product does" and "who it's for" without prescribing "how it's built."
+> **Key Principle**: A PRD focuses on **"what the product does"** and **"who it's for"** without prescribing **"how it's built."**
 
 ### Resources
 
 | Resource | Description |
 |----------|-------------|
-| [PRD Template](./PRD-template.md) | Comprehensive prompt template for generating PRDs |
-| [PRD Example](./PRD-example.md) | Complete example PRD for TacoTracker 3000 |
+| [PRD Template](./PRD-template.md) | Structured discovery process with question frameworks |
+| [PRD Example](./PRD-example.md) | Complete example for TacoTracker 3000 (~2,300 lines) |
 
 ---
 
@@ -202,39 +318,36 @@ A PRD focuses on "what the product does" and "who it's for" without prescribing 
 
 ### About
 
-A UI/UX Design Document (also called a Design System or Design Specification Document) is a comprehensive reference that defines how user interfaces should look and behave across a digital product. It provides a consistent framework for designing user experiences that are intuitive, efficient, accessible, and visually coherent.
+A UI/UX Design Document defines how user interfaces should look and behave. It provides a consistent framework for intuitive, accessible, and visually coherent experiences.
 
-The UI/UX document translates PRD user stories and features into visual and interaction specifications that developers can implement.
+#### What IS Typically in a UI/UX Design Document
 
-#### What IS Typically in a UI/UX Design Document:
+| Category | Contents |
+|----------|----------|
+| **Design Principles** | Core values guiding decisions |
+| **Brand Guidelines** | Logo, colors, typography |
+| **Design Tokens** | Reusable values for consistency |
+| **Component Library** | Buttons, inputs, cards with all states |
+| **Layout System** | Responsive grid specifications |
+| **Screen Specifications** | Detailed wireframes/mockups |
+| **Interaction Patterns** | Animations, transitions, microinteractions |
+| **Accessibility Standards** | WCAG compliance specifications |
 
-- **Design Principles**: Core values guiding design decisions
-- **Brand Guidelines**: Logo usage, color palette, typography
-- **Design Tokens**: Reusable values for colors, spacing, typography
-- **Component Library**: Buttons, inputs, cards, navigation elements with all states
-- **Layout and Grid System**: Responsive grid specifications
-- **Screen Specifications**: Detailed wireframes/mockups for each screen
-- **User Flows**: Visual diagrams showing navigation paths
-- **Interaction Patterns**: Animations, transitions, microinteractions
-- **Accessibility Standards**: WCAG compliance specifications
-- **Error and Empty States**: How the UI handles edge cases
-- **Platform Guidelines**: iOS, Android, and web-specific adaptations
+#### What is NOT in a UI/UX Design Document
 
-#### What is NOT in a UI/UX Design Document:
+- Backend logic or API endpoints
+- Business rules implementation
+- Deployment details
+- Final marketing copy
 
-- **Backend Logic**: API endpoints or database queries
-- **Business Rules**: Complex business logic implementation
-- **Deployment Details**: How to ship the design
-- **Marketing Copy**: Final content (placeholders are acceptable)
-
-A UI/UX document focuses on "how it looks and feels" and "how users interact with it."
+> **Key Principle**: A UI/UX document focuses on **"how it looks and feels"** and **"how users interact with it."**
 
 ### Resources
 
 | Resource | Description |
 |----------|-------------|
-| [UI-UX Template](./UI-UX-template.md) | Comprehensive prompt template for generating design systems |
-| [UI-UX Example](./UI-UX-example.md) | Complete example design system for TacoTracker 3000 |
+| [UI-UX Template](./UI-UX-template.md) | Design system generation with accessibility focus |
+| [UI-UX Example](./UI-UX-example.md) | Complete design system for TacoTracker 3000 (~1,100 lines) |
 
 ---
 
@@ -242,42 +355,37 @@ A UI/UX document focuses on "how it looks and feels" and "how users interact wit
 
 ### About
 
-A High-Level Architecture Document (ARCH) defines the technical structure, patterns, and infrastructure decisions for a software system. It provides a blueprint for how the system will be built, deployed, and scaled.
+A High-Level Architecture Document (ARCH) defines the technical structure, patterns, and infrastructure decisions. It provides a blueprint for how the system will be built, deployed, and scaled.
 
-The ARCH document translates product and design requirements into technical decisions, ensuring the system can meet both functional and non-functional requirements.
+#### What IS Typically in an Architecture Document
 
-#### What IS Typically in an Architecture Document:
+| Category | Contents |
+|----------|----------|
+| **System Overview** | High-level description and purpose |
+| **Architecture Principles** | Guiding technical principles |
+| **C4 Diagrams** | Context, Container, Component diagrams |
+| **Data Architecture** | Data stores, flow, management strategy |
+| **Integration Architecture** | Service communication patterns |
+| **Security Architecture** | Authentication, authorization, encryption |
+| **Infrastructure Design** | Cloud services, networking, topology |
+| **Technology Stack** | Selected technologies with rationale |
+| **ADRs** | Architecture Decision Records |
 
-- **System Overview**: High-level description of the system and its purpose
-- **Architecture Principles**: Guiding technical principles (e.g., API-first, security by default)
-- **System Context Diagram**: How the system interacts with external systems and users
-- **Container Diagram**: Major deployable units (apps, services, databases)
-- **Component Diagrams**: Internal structure of key containers
-- **Data Architecture**: Data stores, data flow, and data management strategy
-- **Integration Architecture**: How services communicate (REST, events, queues)
-- **Security Architecture**: Authentication, authorization, encryption approach
-- **Infrastructure Design**: Cloud services, networking, deployment topology
-- **Technology Stack**: Selected technologies with rationale
-- **Architecture Decision Records (ADRs)**: Key decisions with context and alternatives
-- **Non-Functional Requirements Mapping**: How architecture addresses NFRs
-- **Risks and Mitigations**: Technical risks and mitigation strategies
+#### What is NOT in an Architecture Document
 
-#### What is NOT in an Architecture Document:
+- Actual code or pseudocode
+- Detailed API contracts (specific endpoints)
+- Database table definitions
+- UI implementation details
 
-- **Code Implementation**: Actual code or pseudocode
-- **Detailed API Contracts**: Specific endpoint definitions (belongs in TDD)
-- **Database Schema Details**: Table definitions and indexes (belongs in TDD)
-- **UI Implementation**: Frontend code or component implementation
-- **Test Cases**: Specific test implementations
-
-An ARCH document focuses on "how the system is structured" and "why these technical choices were made."
+> **Key Principle**: An ARCH document focuses on **"how the system is structured"** and **"why these technical choices were made."**
 
 ### Resources
 
 | Resource | Description |
 |----------|-------------|
-| [ARCH Template](./ARCH-template.md) | Comprehensive prompt template for generating architecture documents |
-| [ARCH Example](./ARCH-example.md) | Complete example architecture for TacoTracker 3000 |
+| [ARCH Template](./ARCH-template.md) | C4 model framework with ADR guidance |
+| [ARCH Example](./ARCH-example.md) | Complete architecture for TacoTracker 3000 (~1,900 lines) |
 
 ---
 
@@ -285,40 +393,37 @@ An ARCH document focuses on "how the system is structured" and "why these techni
 
 ### About
 
-A Technical Design Document (TDD) provides implementation-ready specifications for developers. It bridges architecture decisions and actual code by defining APIs, database schemas, service implementations, and integration details.
+A Technical Design Document (TDD) provides implementation-ready specifications. It bridges architecture decisions and actual code by defining APIs, database schemas, service implementations, and integration details.
 
-The TDD is the final documentation step before coding begins, ensuring developers have everything they need to implement the system correctly.
+#### What IS Typically in a Technical Design Document
 
-#### What IS Typically in a Technical Design Document:
+| Category | Contents |
+|----------|----------|
+| **API Specifications** | Detailed endpoints with request/response schemas |
+| **Database Schema** | Table definitions, relationships, indexes, migrations |
+| **Service Layer Design** | Class/module structure, business logic organization |
+| **Data Models** | TypeScript interfaces, DTOs, validation rules |
+| **Auth Implementation** | Token handling, permission checks |
+| **Third-Party Integrations** | Specific integration implementations |
+| **Error Handling** | Error types, codes, handling patterns |
+| **Testing Strategy** | Test types, coverage requirements, examples |
+| **Deployment Pipeline** | CI/CD configuration, environment setup |
 
-- **API Specifications**: Detailed endpoint definitions with request/response schemas
-- **Database Schema**: Table definitions, relationships, indexes, migrations
-- **Service Layer Design**: Class/module structure, business logic organization
-- **Data Models and Types**: TypeScript interfaces, DTOs, validation rules
-- **Authentication/Authorization Implementation**: Token handling, permission checks
-- **Third-Party Integrations**: Specific integration implementations (Stripe, Firebase, etc.)
-- **Error Handling Strategy**: Error types, codes, and handling patterns
-- **Logging and Monitoring**: Log formats, metrics, alerting rules
-- **Caching Strategy**: Cache keys, TTLs, invalidation patterns
-- **Testing Strategy**: Test types, coverage requirements, example tests
-- **Deployment Pipeline**: CI/CD configuration, environment setup
-- **Feature Flags**: Rollout strategy and flag definitions
+#### What is NOT in a Technical Design Document
 
-#### What is NOT in a Technical Design Document:
+- Business justification (BRD content)
+- User personas (PRD content)
+- Visual design specifications (UI/UX content)
+- High-level architecture decisions (ARCH content)
 
-- **Business Justification**: Why we're building this (belongs in BRD)
-- **User Personas**: Who uses the system (belongs in PRD)
-- **Visual Design**: UI specifications (belongs in UI-UX)
-- **High-Level Architecture**: System structure (belongs in ARCH)
-
-A TDD focuses on "exactly how to implement each component" with enough detail that a developer can code without ambiguity.
+> **Key Principle**: A TDD focuses on **"exactly how to implement each component"** with enough detail that a developer can code without ambiguity.
 
 ### Resources
 
 | Resource | Description |
 |----------|-------------|
-| [TDD Template](./TDD-template.md) | Comprehensive prompt template for generating technical designs |
-| [TDD Example](./TDD-example.md) | Complete example technical design for TacoTracker 3000 |
+| [TDD Template](./TDD-template.md) | Implementation-ready specification framework (~1,100 lines) |
+| [TDD Example](./TDD-example.md) | Complete technical design for TacoTracker 3000 (~3,100 lines) |
 
 ---
 
@@ -326,10 +431,10 @@ A TDD focuses on "exactly how to implement each component" with enough detail th
 
 ### About
 
-Task Planning breaks down the technical design into actionable development tasks. This phase creates a structured backlog of work items that can be executed in sprints or iterations.
+Task Planning breaks down the technical design into actionable development tasks. This phase creates a structured backlog of work items for sprints or iterations.
 
-Task planning involves:
-- Breaking features into implementable chunks
+**Task planning involves:**
+- Breaking features into implementable chunks (1-3 days each)
 - Estimating effort and complexity
 - Identifying dependencies between tasks
 - Prioritizing work based on value and risk
@@ -364,17 +469,20 @@ Include acceptance criteria for each task.
 
 The Execution phase is where actual development happens. Using the task plan and TDD as guides, developers (with AI assistance) implement the system.
 
-Best practices for AI-assisted execution:
-- Feed the AI relevant sections of the TDD for context
-- Implement one task at a time with clear boundaries
-- Review AI-generated code carefully before committing
-- Use AI to help write tests alongside implementation
-- Keep the AI informed of any deviations from the design
+### Best Practices for AI-Assisted Execution
+
+| Practice | Description |
+|----------|-------------|
+| **Context feeding** | Feed relevant TDD sections to the AI for each task |
+| **Single task focus** | Implement one task at a time with clear boundaries |
+| **Code review** | Review AI-generated code carefully before committing |
+| **Test alongside** | Use AI to write tests alongside implementation |
+| **Document deviations** | Keep AI informed of any changes from the design |
 
 ### Prompt Template
 
 ```
-I'm implementing [task name] from the TacoTracker 3000 project.
+I'm implementing [task name] from the [project name] project.
 
 Context from TDD:
 [paste relevant TDD section]
@@ -395,7 +503,8 @@ Follow these coding standards:
 
 ### About
 
-Packaging prepares the application for deployment. This includes:
+Packaging prepares the application for deployment:
+
 - Building production artifacts
 - Running final test suites
 - Creating deployment packages (Docker images, binaries, etc.)
@@ -425,7 +534,8 @@ Tasks:
 
 ### About
 
-Deployment releases the application to production environments. This phase includes:
+Deployment releases the application to production environments:
+
 - Infrastructure provisioning
 - Application deployment
 - Database migrations
@@ -455,29 +565,285 @@ Target state: [describe desired state]
 
 ## Templates and Examples Summary
 
-| Document Type | Template | Example | Description |
-|--------------|----------|---------|-------------|
-| **BRD** | [BRD-template.md](./BRD-template.md) | [BRD-example.md](./BRD-example.md) | Business requirements and justification |
-| **PRD** | [PRD-template.md](./PRD-template.md) | [PRD-example.md](./PRD-example.md) | Product features, user stories, acceptance criteria |
-| **UI-UX** | [UI-UX-template.md](./UI-UX-template.md) | [UI-UX-example.md](./UI-UX-example.md) | Design system, components, accessibility |
-| **ARCH** | [ARCH-template.md](./ARCH-template.md) | [ARCH-example.md](./ARCH-example.md) | System architecture, infrastructure, ADRs |
-| **TDD** | [TDD-template.md](./TDD-template.md) | [TDD-example.md](./TDD-example.md) | API specs, database schema, implementation details |
+| Document Type | Template | Example | Lines | Purpose |
+|--------------|----------|---------|-------|---------|
+| **BRD** | [BRD-template.md](./BRD-template.md) | [BRD-example.md](./BRD-example.md) | ~890 / ~1,120 | Business requirements and justification |
+| **PRD** | [PRD-template.md](./PRD-template.md) | [PRD-example.md](./PRD-example.md) | ~290 / ~2,310 | Product features, user stories, acceptance criteria |
+| **UI-UX** | [UI-UX-template.md](./UI-UX-template.md) | [UI-UX-example.md](./UI-UX-example.md) | ~900 / ~1,090 | Design system, components, accessibility |
+| **ARCH** | [ARCH-template.md](./ARCH-template.md) | [ARCH-example.md](./ARCH-example.md) | ~620 / ~1,900 | System architecture, infrastructure, ADRs |
+| **TDD** | [TDD-template.md](./TDD-template.md) | [TDD-example.md](./TDD-example.md) | ~1,110 / ~3,150 | API specs, database schema, implementation details |
 
 ### Example Project: TacoTracker 3000
 
-All examples in this repository use the fictional "TacoTracker 3000" project - an enterprise taco truck tracking and ordering system for Globex Corporation. This consistent example across all document types demonstrates:
+All examples use the fictional **"TacoTracker 3000"** project - an enterprise taco truck tracking and ordering system for Globex Corporation. This consistent example demonstrates:
 
-- How documents reference and build upon each other
-- The level of detail expected in each document type
-- How business requirements flow through to technical implementation
-- A touch of humor while maintaining professional quality
+| Aspect | Demonstration |
+|--------|---------------|
+| **Document threading** | How documents reference and build upon each other |
+| **Detail expectations** | The level of detail expected in each document type |
+| **Requirements flow** | How business requirements flow to technical implementation |
+| **Professional quality** | Enterprise-grade documentation with a touch of humor |
+
+**TacoTracker 3000 solves "Taco-Related Disappointment Syndrome" (TRDS)** - a fictional but relatable workplace problem that makes the examples engaging while demonstrating serious documentation practices.
+
+---
+
+## How to Use the Templates
+
+### Method 1: Chat Interface (Recommended for Discovery)
+
+Best for: Initial document creation with interactive discovery
+
+1. **Open your AI chat** (Claude, ChatGPT, Gemini)
+2. **Paste the entire template** as your first message
+3. **Fill in the context sections** in the template before sending
+4. **Engage in the discovery process** - answer the AI's questions
+5. **Review and iterate** on the generated document
+6. **Export** the final document to markdown
+
+### Method 2: IDE Integration (Recommended for Execution)
+
+Best for: Implementation phases with code generation
+
+1. **Open your AI-enabled IDE** (VS Code + Claude Code, Cursor, etc.)
+2. **Create a project docs folder** with your completed documents
+3. **Reference documents in prompts**: "Based on the TDD in /docs/TDD.md..."
+4. **Let the AI read the files** for context during implementation
+
+### Method 3: API Usage (Recommended for Automation)
+
+Best for: Automated document generation or CI/CD integration
+
+```python
+# Example using Anthropic's API
+import anthropic
+
+client = anthropic.Anthropic()
+
+with open("BRD-template.md", "r") as f:
+    template = f.read()
+
+message = client.messages.create(
+    model="claude-sonnet-4-20250514",
+    max_tokens=4096,
+    messages=[
+        {"role": "user", "content": f"{template}\n\n<business_context>Your context here</business_context>"}
+    ]
+)
+```
+
+---
+
+## Customization Guide
+
+### Adapting Templates for Your Industry
+
+| Industry | Key Customizations |
+|----------|-------------------|
+| **FinTech** | Add PCI-DSS compliance sections, fraud detection requirements, regulatory reporting |
+| **Healthcare** | Expand HIPAA compliance, add PHI handling, clinical workflow considerations |
+| **E-commerce** | Add inventory management, payment processing, shipping integration sections |
+| **SaaS** | Expand multi-tenancy, subscription management, usage metering sections |
+| **Government** | Add FedRAMP compliance, accessibility (Section 508), security clearance requirements |
+
+### Scaling Templates for Project Size
+
+| Project Size | Recommended Approach |
+|--------------|---------------------|
+| **Small** (1-2 developers, < 3 months) | Use simplified versions, combine PRD + UI/UX |
+| **Medium** (3-5 developers, 3-6 months) | Use full templates, might skip detailed ADRs |
+| **Large** (6+ developers, 6+ months) | Use all templates with full detail, add component-level TDDs |
+| **Enterprise** (Multiple teams, ongoing) | Add program-level documentation, cross-team integration docs |
+
+### Adding Custom Sections
+
+Templates are designed to be extended. Common additions:
+
+```markdown
+## [Your Custom Section]
+
+### Purpose
+[Why this section is needed for your project]
+
+### Content
+[Section content following the template's formatting patterns]
+```
+
+---
+
+## Best Practices
+
+### Document Quality
+
+| Practice | Description |
+|----------|-------------|
+| **Be specific** | Use concrete examples, real numbers, actual field names |
+| **Show don't tell** | Include diagrams, code samples, data examples |
+| **Maintain consistency** | Use same terminology across all documents |
+| **Version control** | Keep documents in git alongside code |
+| **Review regularly** | Update documents as understanding evolves |
+
+### AI Interaction
+
+| Practice | Description |
+|----------|-------------|
+| **Provide context** | Always include relevant previous documents |
+| **One thing at a time** | Focus prompts on single tasks or sections |
+| **Verify outputs** | AI can make mistakes - always review critically |
+| **Iterate** | Don't expect perfection on first try |
+| **Save progress** | Keep intermediate versions of long documents |
+
+### Team Collaboration
+
+| Practice | Description |
+|----------|-------------|
+| **Assign owners** | Each document should have a responsible owner |
+| **Review process** | Establish review workflows before finalizing |
+| **Share knowledge** | Use documents for onboarding new team members |
+| **Track changes** | Use version history tables in documents |
+
+---
+
+## FAQ and Troubleshooting
+
+### General Questions
+
+**Q: Do I need to create all 5 documents?**
+A: No. Start with what you need. For small projects, BRD + TDD might be sufficient. For design-heavy projects, PRD + UI/UX + TDD. Choose based on your gaps.
+
+**Q: Can I use these with any AI model?**
+A: Yes. Templates work with Claude, GPT-4, Gemini, and other capable models. Output quality may vary by model.
+
+**Q: How long does it take to create each document?**
+A: Varies by project complexity:
+- BRD: 1-4 hours of interactive discovery
+- PRD: 2-6 hours
+- UI/UX: 2-4 hours
+- ARCH: 2-4 hours
+- TDD: 4-8 hours
+
+**Q: Should I use the examples as starting points?**
+A: The examples demonstrate output quality and completeness. Use templates for generation; reference examples for expected depth.
+
+### Troubleshooting
+
+**Problem: AI generates shallow or incomplete documents**
+- Solution: Ensure you've filled in all context sections thoroughly
+- Solution: Engage more deeply with discovery questions
+- Solution: Try a more capable model (e.g., Claude Opus vs Sonnet)
+
+**Problem: Documents conflict with each other**
+- Solution: Always provide previous documents as context
+- Solution: Review for consistency before moving to next phase
+- Solution: Update earlier documents when requirements change
+
+**Problem: Templates are too detailed for my project**
+- Solution: Remove sections that don't apply
+- Solution: Combine related sections
+- Solution: Use the template structure but write shorter content
+
+**Problem: AI hits token limits mid-document**
+- Solution: Generate documents in sections
+- Solution: Use "Continue from where you left off" prompts
+- Solution: Summarize previous sections before continuing
+
+**Problem: Generated code doesn't match TDD specifications**
+- Solution: Include specific TDD sections in implementation prompts
+- Solution: Break implementation into smaller, focused tasks
+- Solution: Use the TDD as a checklist during code review
+
+---
+
+## Glossary
+
+| Term | Definition |
+|------|------------|
+| **ADR** | Architecture Decision Record - documents a significant architectural decision |
+| **ARCH** | Architecture Document - defines system structure and technical decisions |
+| **BRD** | Business Requirements Document - captures business needs and justification |
+| **C4 Model** | Context, Container, Component, Code - a hierarchical approach to software architecture diagrams |
+| **DTO** | Data Transfer Object - object that carries data between processes |
+| **MCP** | Model Context Protocol - standard for connecting AI models to external tools and data |
+| **PRD** | Product Requirements Document - defines product features and user experience |
+| **RACI** | Responsible, Accountable, Consulted, Informed - responsibility assignment matrix |
+| **SMART** | Specific, Measurable, Achievable, Relevant, Time-bound - goal-setting criteria |
+| **TDD** | Technical Design Document - provides implementation-ready specifications |
+| **UAT** | User Acceptance Testing - validation that system meets user requirements |
+| **WCAG** | Web Content Accessibility Guidelines - standards for web accessibility |
+
+---
+
+## Related Resources
+
+### Official Documentation
+
+- [Claude Code Documentation](https://docs.anthropic.com/en/docs/claude-code/overview)
+- [Anthropic API Documentation](https://docs.anthropic.com/)
+- [MCP Specification](https://docs.anthropic.com/en/docs/agents-and-tools/mcp)
+
+### Architecture Frameworks
+
+- [C4 Model](https://c4model.com/) - Visualizing software architecture
+- [TOGAF](https://www.opengroup.org/togaf) - Enterprise architecture framework
+- [Arc42](https://arc42.org/) - Software architecture documentation template
+
+### Design Systems
+
+- [Material Design](https://material.io/) - Google's design system
+- [Apple Human Interface Guidelines](https://developer.apple.com/design/)
+- [WCAG Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/) - Accessibility standards
+
+### Markdown Reference
+
+- [Markdown Guide](https://www.markdownguide.org/basic-syntax/) - Basic syntax reference
+- [GitHub Flavored Markdown](https://github.github.com/gfm/) - Extended markdown features
 
 ---
 
 ## Contributing
 
-Contributions are welcome! If you have improvements to templates or want to add examples, please submit a pull request.
+Contributions are welcome! Here's how you can help:
+
+### Ways to Contribute
+
+| Contribution Type | Description |
+|-------------------|-------------|
+| **Template improvements** | Enhance existing templates with better questions or sections |
+| **New examples** | Add examples from different domains or project types |
+| **Bug fixes** | Fix typos, broken links, or formatting issues |
+| **Translations** | Translate templates to other languages |
+| **Documentation** | Improve README or add tutorials |
+
+### Contribution Process
+
+1. **Fork** the repository
+2. **Create a branch** for your changes
+3. **Make your changes** following existing formatting patterns
+4. **Test** templates with an AI to verify they work
+5. **Submit a pull request** with clear description of changes
+
+### Style Guidelines
+
+- Maintain consistent markdown formatting
+- Use tables for structured information
+- Include examples where helpful
+- Keep the professional-but-accessible tone
+- Test templates with AI before submitting
+
+---
 
 ## License
 
 This repository is provided for educational and reference purposes.
+
+---
+
+## Acknowledgments
+
+This framework emerged from practical experience building software with AI assistance. Special thanks to the AI coding community for sharing their workflows and insights.
+
+---
+
+<p align="center">
+  <i>Better documentation leads to better AI context leads to better code.</i>
+</p>
