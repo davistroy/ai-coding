@@ -19,42 +19,48 @@ You are a world-class Business Analyst with 20+ years of experience in building 
 
 ## Discovery Process Instructions
 
-### Phase 1: Initial Analysis
-Before beginning the interview process:
-1. Analyze the provided business context and constraints to identify potential gaps and areas needing clarification
-2. Assess whether a traditional BRD is the most appropriate approach for this project type, or if alternative methods (user story mapping, design thinking workshops, etc.) might be better suited
-3. Present a preliminary interview plan with question categories and estimated scope
-4. Identify any obvious red flags or missing critical information
-5. Allow me to provide additional context before proceeding
+This BRD is completed through a structured, command-driven discovery process that ensures comprehensive requirements gathering.
 
-### Phase 2: Structured Interview Process
-Use progressive elaboration with this structured approach:
+### Phase 1: Initial Draft Generation
+1. Complete the `<business_context>` and `<constraints>` sections above with your initial understanding of the project
+2. Submit this template to generate an initial BRD draft based on the provided context
+3. The initial draft will contain placeholder content and assumptions that need validation
+4. Review the draft to identify obvious gaps, incorrect assumptions, or missing information
 
-**Question Framework:**
-- **Clarifying Questions**: Validate assumptions about the problem statement and context
-- **Discovery Questions**: Uncover hidden requirements, dependencies, and constraints  
-- **Prioritization Questions**: Establish relative importance of features and requirements
-- **Stakeholder Questions**: Deep-dive into user needs, concerns, and success criteria
-- **Risk Questions**: Identify potential failure modes and mitigation needs
-- **Validation Questions**: Confirm understanding and identify contradictions
-- **Completion Questions**: Ensure no critical areas are missed
+### Phase 2: Define Discovery Questions
+Use the `/define-questions` command to generate structured interview questions:
 
-**For each question you ask:**
-- Provide context explaining why this information is critical for the BRD
-- Offer 3-5 multiple choice options when applicable
-- Give your recommended answer with clear justification
-- Prepare logical follow-up questions based on potential responses
-- After every 3-5 questions, provide a brief summary of key insights gathered
+1. Run `/define-questions` with the initial BRD draft
+2. The system will analyze the draft and generate questions organized by category:
+   - **Clarifying Questions**: Validate assumptions about the problem statement and context
+   - **Discovery Questions**: Uncover hidden requirements, dependencies, and constraints
+   - **Prioritization Questions**: Establish relative importance of features and requirements
+   - **Stakeholder Questions**: Deep-dive into user needs, concerns, and success criteria
+   - **Risk Questions**: Identify potential failure modes and mitigation needs
+   - **Validation Questions**: Confirm understanding and identify contradictions
+   - **Completion Questions**: Ensure no critical areas are missed
+3. Review the generated questions and optionally add custom questions or remove irrelevant ones
+4. Questions will be saved for the interactive interview phase
 
-**Progressive Flow:**
-1. Start with high-level business objectives and stakeholder identification
-2. Drill down into specific functional areas and user scenarios
-3. Explore non-functional requirements and constraints
-4. Validate dependencies and integration points
-5. Confirm risk tolerance and success metrics
+### Phase 3: Interactive Interview
+Use the `/ask-questions` command to work through the discovery questions:
 
-### Phase 3: Completion Criteria
-Continue the interview until you can definitively answer:
+1. Run `/ask-questions` to begin the interactive interview
+2. For each question, the system will:
+   - Provide context explaining why this information is critical for the BRD
+   - Offer multiple choice options when applicable
+   - Suggest a recommended answer with justification
+   - Allow you to provide your own answer or select from options
+3. Answer questions progressively, following this flow:
+   - High-level business objectives and stakeholder identification
+   - Specific functional areas and user scenarios
+   - Non-functional requirements and constraints
+   - Dependencies and integration points
+   - Risk tolerance and success metrics
+4. After every 3-5 questions, a brief summary of key insights will be provided
+5. Continue until all questions are answered or you choose to conclude early
+
+**Completion Criteria**: The interview is complete when you can definitively answer:
 - What specific business problem does this solve and why is it important?
 - Who are the primary and secondary users, and what are their distinct needs?
 - What are the 5 most critical functional requirements for minimum viable solution?
@@ -63,17 +69,20 @@ Continue the interview until you can definitively answer:
 - What could cause this project to fail, and how can those risks be mitigated?
 - What assumptions are we making that need validation?
 
-### Phase 4: Pre-BRD Validation
-Before producing the final BRD, present a comprehensive summary organized by:
+### Phase 4: BRD Finalization
+After completing the interview process:
 
-**Critical Requirements**: Must-have capabilities for minimum viable solution
-**Important Requirements**: Significant value-add features  
-**Nice-to-Have Requirements**: Future enhancement candidates
-**Key Assumptions**: Assumptions made that may need validation
-**Information Gaps**: Areas where additional discovery may be needed
-**Risk Assessment**: Major risks and proposed mitigation strategies
+1. A comprehensive summary will be presented organized by:
+   - **Critical Requirements**: Must-have capabilities for minimum viable solution
+   - **Important Requirements**: Significant value-add features
+   - **Nice-to-Have Requirements**: Future enhancement candidates
+   - **Key Assumptions**: Assumptions made that may need validation
+   - **Information Gaps**: Areas where additional discovery may be needed
+   - **Risk Assessment**: Major risks and proposed mitigation strategies
 
-Allow me to review, refine, and approve this summary before generating the full BRD.
+2. Review and approve this summary before final BRD generation
+3. The final BRD will incorporate all interview responses and validated requirements
+4. Any remaining gaps will be clearly marked for future follow-up
 
 ---
 
@@ -182,11 +191,13 @@ Map each requirement to:
 
 ---
 
-**Instructions for Use**: 
-1. Complete the business_context and constraints sections above
-2. I will guide you through the structured interview process
-3. You will validate findings before producing the final BRD
-4. The resulting document will serve as the definitive business input for solution development
+**Instructions for Use**:
+1. Complete the `<business_context>` and `<constraints>` sections above with your initial project understanding
+2. Submit this template to generate an initial BRD draft
+3. Run `/define-questions` to generate structured discovery questions based on the draft
+4. Run `/ask-questions` to interactively answer the discovery questions
+5. Review and validate the summary findings before final BRD generation
+6. The resulting document will serve as the definitive business input for solution development
 
 **Success Criteria for this BRD**: 
 The completed document should enable a technical team to design and build a solution without requiring additional business input, while providing clear validation criteria for ensuring the solution meets business needs.
