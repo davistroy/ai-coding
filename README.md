@@ -49,11 +49,9 @@ Here are the instructions for:
 [VS Code Cline](https://cline.bot/mcp-marketplace)  
 
 I suggest installing the following MCP servers:  
-[github](https://github.com/github/github-mcp-server)  
-[context7](https://github.com/upstash/context7)  
-[taskmaster-ai](https://github.com/eyaltoledano/claude-task-master)  
-[desktop-commander](https://github.com/wonderwhy-er/DesktopCommanderMCP)  
-[playwright](https://github.com/microsoft/playwright-mcp)
+[github](https://github.com/github/github-mcp-server) - if you want to store your code in a version control system
+[context7](https://github.com/upstash/context7) - ensures the use of the latest documentation
+[playwright](https://github.com/microsoft/playwright-mcp) ... wont be needed for Claude Code - it has a chrome driver built in
 
 Depending on the type of project you are building, other MCP servers may be helpful.
 
