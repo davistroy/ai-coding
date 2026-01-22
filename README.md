@@ -1,6 +1,6 @@
 For reference: [Markdown Syntax](https://www.markdownguide.org/basic-syntax/)
 
-# Prompts for AI (aka "Vibe") Coding
+# Prompts for AI
 
 ## General Structure
 0. Development System/Tooling Setup
