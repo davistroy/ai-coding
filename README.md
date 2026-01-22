@@ -24,7 +24,7 @@ I personnaly use Anthropic's Claude Opus, but Claude Sonnet works well for anyth
 >**Note**: be VERY carefule with protecting your API key - if a nefarious person/organization gets your key, they can quickly run up many thousands of dollars of charges at your expense.
 
 ### Coding Environment
-I have used [VS Code](https://code.visualstudio.com/) with the [Cline](https://cline.bot/) extension, but have more recently switched to [Claude Code](https://docs.anthropic.com/en/docs/claude-code/overview).  If you are Windows native, Claude Code runs in a WSL2 environment on Windows, so be aware of this additional setup and usage complexity.  Other options are set up a VM on Windows to run a Linux VM or set up a cheap VPS in the cloud.  Ask your AI how to set any of that up.
+I have used [VS Code](https://code.visualstudio.com/) with [Claude Code](https://docs.anthropic.com/en/docs/claude-code/overview).
 
 I have not used windsurf or cursor, but they are popular options as well.
 
@@ -56,6 +56,10 @@ I suggest installing the following MCP servers:
 [playwright](https://github.com/microsoft/playwright-mcp)
 
 Depending on the type of project you are building, other MCP servers may be helpful.
+
+### Claude Code Plugins
+
+update this section to show how to install claude code marketplaces and the official plugins as well as this one: https://github.com/davistroy/claude-marketplace/tree/main/plugins/personal-plugin
 
 ---
 
